@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sec {
+            background-color: gray;
+            height: 800px;
+
+        }
+
+        .col-50 {
+            border: 2px solid;
+            width: 50%;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: rgb(172, 169, 82);
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="sec">
+        <div class="col-50">
+            <form onsubmit="return validForm()">
+                <input type="text" id="username" placeholder="enter your name"> <br>
+                <p id="usererror"></p>
+                <input type="password" id="userpassword" placeholder="enter your password" name="" id=""> <br>
+                <p id="passworderror"></p>
+                <input type="radio" name="gender" id="male" class="gender"> Male
+                <input type="radio" name="gender" id="female" class="gender"> Female <br>
+                <p id=" maleerror"></p>
+                <input type="email" name="email" id="email"> <br>
+                <p id="emailerror"></p>
+                <input type="checkbox" name="" id="checkbox">
+                <p id="checkboxerror"></p>
+                <input type="submit" value="login"><br>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        let username = document.getElementById("username")
+        let password = document.getElementById("userpassword")
+        let usererror = document.getElementById("usererror")
+        let passworderror = document.getElementById("passworderror")
+        let male = document.getElementById("male")
+        let female = document.getElementById("female")
+        let maleerror = document.getElementById("maleerror")
+        let gender = document.getElementsByClassName("gender")
+        let email = document.getElementById("email")
+        let checkbox = document.getElementById("checkbox")
+        let count = 1
+
+        function validForm() {
+            console.log(username.value);
+            console.log(password.value);
+            if (username.value == "") {
+                // document.getElementById("usererror").innerHTML = "enter your name"
+                usererror.innerHTML = "enter your name"
+                count = 0
+            }
+            else {
+                document.getElementById("usererror").innerHTML = ""
+                count = 1
+            }
+
+            if (password.value == "") {
+                passworderror.innerHTML = "enter your password fisrt"
+                count = 0
+            }
+            else if (password.value.length < 8) {
+                passworderror.innerHTML = "max 8 char"
+                count = 0
+            }
+            else {
+                document.getElementById("passworderror").innerHTML = ""
+                count = 1
+            }
+
+            if (male.checked == false && female.checked == false) {
+                // maleerror.innerHTML = "please select your Gender"
+                alert("Please select your Gender")
+                // maleerror.innerHTML = "enter your name"
+                count = 0
+            }
+            else {
+                document.getElementById("maleerror").innerHTML = ""
+                count = 1
+            }
+
+            if (email.value == "") {
+                emailerror.innerHTML = "Please Enter Your Email"
+                count = 0
+            }
+
+            else {
+                document.getElementById("emailerror").innerHTML = ""
+                count = 1
+            }
+
+            if (checkbox.checked) {
+                document.getElementById("checkboxerror").innerHTML = ""
+
+            }
+            else {
+                document.getElementById("checkboxerror").innerHTML = "Please accept T & C"
+            }
+
+
+            if (count) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>
