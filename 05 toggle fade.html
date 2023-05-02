@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: none;
+        }
+
+        #box1 {
+            background-color: red;
+        }
+
+        #box2 {
+            background-color: rgb(21, 0, 255);
+        }
+
+        #box3 {
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+    <button id="fadein">Fade In-Out</button>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+    <script>
+        $('#fadein').click(function () {
+            $('#box1').fadeToggle(2000)
+            $('#box2').fadeToggle(4000)
+            $('#box3').fadeToggle(6000)
+        })
+    </script>
+</body>
+
+</html>
