@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <label for="number">Enter your number</label>
+    <input type="number" name="number" id="num">
+    <p id="res"></p>
+    <button onclick="fun()">Check</button>
+    <script>
+        var num;
+        function fun() {
+            num = document.getElementById("num").value;
+            if (num == "") {
+                document.getElementById("res").innerHTML = "Please enter your number";
+                event.preventDefault()
+            }
+            else if (num != '') {
+                if (num % 2 == 0) {
+                    document.getElementById("res").innerHTML = "It is an Even number";
+                }
+                else {
+                    document.getElementById("res").innerHTML = "It is an Odd number";
+                }
+            }
+            else {
+                document.getElementById("res").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
