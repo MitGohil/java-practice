@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="days">Select day number</label>
+    <input type="number" name="days" id="num">
+    <button onclick="day()">CHECK</button>
+    <p id="invalid"></p>
+
+    <script>
+        let num;
+        function day() {
+            num = document.getElementById("num");
+            if (num.value == 0) {
+                document.getElementById("invalid").innerHTML = "You select SUNDAY";
+                event.preventDefault();
+            }
+            else if (num.value == 1) {
+                document.getElementById("invalid").innerHTML = "You select MONDAY";
+                event.preventDefault();
+            }
+            else if (num.value == 2) {
+                document.getElementById("invalid").innerHTML = "You select TUESDAY";
+                event.preventDefault();
+            }
+            else if (num.value == 3) {
+                document.getElementById("invalid").innerHTML = "You select WENESDAY";
+                event.preventDefault();
+
+            }
+            else if (num.value == 4) {
+                document.getElementById("invalid").innerHTML = "You select THURSDAY";
+                event.preventDefault();
+
+            }
+            else if (num.value == 5) {
+                document.getElementById("invalid").innerHTML = "You select FRIDAY";
+                event.preventDefault();
+
+            }
+            else if (num.value == 6) {
+                document.getElementById("invalid").innerHTML = "You select SATURDAY";
+                event.preventDefault();
+
+            }
+            else {
+                document.getElementById("invalid").innerHTML = "You select INVALID number";
+            }
+        }
+    </script>
+</body>
+
+</html>
