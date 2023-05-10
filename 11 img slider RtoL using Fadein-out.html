@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .img {
+            /* width: 100px;
+            height: 100px; */
+            margin: 5px;
+            display: none;
+            float: right;
+            width: 400px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #fadein,
+        #fadeout {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+    <div class="conteiner">
+        <button id="fadein">Fade In</button>
+        <button id="fadeout">Fade Out</button> <br>
+        <div id="box1" class="img">
+            <img src="./image/1.png" alt="">
+        </div>
+        <div id="box2" class="img">
+            <img src="./image/2.png" alt="">
+        </div>
+        <div id="box3" class="img">
+            <img src="./image/2.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        $('#fadein').click(function () {
+            $('#box1').fadeIn(2000)
+            $('#box2').fadeIn(4000)
+            $('#box3').fadeIn(6000)
+        })
+        $('#fadeout').click(function () {
+            $('#box1').fadeOut(6000)
+            $('#box2').fadeOut(4000)
+            $('#box3').fadeOut(2000)
+        })
+    </script>
+</body>
+
+</html>
