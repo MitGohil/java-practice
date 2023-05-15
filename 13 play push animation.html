@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Play and Stop CSS Animation</title>
+    <style>
+        .animated {
+            height: 620px;
+            margin: 10px 0;
+            background: url("./image/gohil.jpg") no-repeat left center #e4eacf;
+            -webkit-animation: test 4s infinite;
+            animation: test 4s infinite;
+        }
+
+        .play-animation,
+        .stop-animation {
+            display: block;
+            margin: 25px auto;
+        }
+
+        @-webkit-keyframes test {
+            50% {
+                background-position: right;
+            }
+        }
+
+        @keyframes test {
+            50% {
+                background-position: right;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".play-animation").click(function () {
+                $(".animated").css("animation-play-state", "running");
+            });
+            $(".stop-animation").click(function () {
+                $(".animated").css("animation-play-state", "paused");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="animated"></div>
+    <button type="button" class="play-animation">Play Animation</button>
+    <button type="button" class="stop-animation">Stop Animation</button>
+</body>
+
+</html>
