@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        font-family: sans-serif;
+        background-color: lightgoldenrodyellow;
+        overflow: hidden;
+    }
+
+    header {
+        width: 100%;
+        height: 6rem;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .line {
+        width: 40px;
+        height: 7px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .navigation {
+        transition: all 1s ease-in-out;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+
+    .navigation ul li {
+        list-style: none;
+        margin-right: 3rem;
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 100%;
+        padding: 2rem;
+        display: inline-block;
+        transition: all .3s ease;
+    }
+
+    .navigation ul li a:hover {
+        background-color: lightskyblue;
+    }
+
+    .navigation.active {
+        left: 44rem;
+        top: 6rem;
+    }
+
+
+    @media only screen and (max-width: 900px) {
+
+        body {
+            overflow: hidden;
+        }
+
+        header {
+            padding: 0 5rem;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 6rem;
+            left: 88rem;
+            width: 50%;
+            height: 100%;
+            background-color: #24252a;
+        }
+
+        .navigation ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navigation ul li {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navigation ul li a {
+            /* border-bottom: solid .25px rgba(211, 211, 211, .6); */
+            display: block;
+
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">MY LOGO</div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </header>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.navigation').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
