@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reg.form.css">
+</head>
+
+<body>
+    <section>
+        <div class="conteiner">
+            <h1>Registration Form</h1>
+            <form onsubmit="return regForm()" action="">
+                <fieldset>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <label for="name"> Name :- </label>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="name" placeholder="Enter Your Name">
+                                <span id="nameerror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="address"> Address :- </label>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="address" placeholder="Enter Your Address">
+                                <span id="adderror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email"> Email :- </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" placeholder="xxxx@xxx.xxx">
+                                <span id="emailerror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="gender">Gender :- </label>
+                            </td>
+                            <td>
+                                <input type="radio" name="gender" id="male"> Male
+                                <input type="radio" name="gender" id="female"> Female
+                                <p id="gendererror"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">Password :- </label>
+                            </td>
+                            <td>
+                                <input type="password" name="" id="password" placeholder="Enter Your Password">
+                                <span id="passerror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="confpassword">Confirm Password :- </label>
+                            </td>
+                            <td>
+                                <input type="password" name="" id="confpassword" placeholder="Re-type Password">
+                                <span id="confpasserror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Show Password :-</p>
+                            </td>
+                            <td>
+                                <div class="onoff">
+                                    <label class="rocker rocker-small">
+                                        <input type="checkbox" onclick="toggleVisibility()">
+                                        <span class="switch-left">Yes</span>
+                                        <span class="switch-right">No</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="mobile">Mobile Number :- </label>
+                            </td>
+                            <td>
+                                <input type="tel" name="mobile" id="mobile" placeholder="1234567890" maxlength="10">
+                                <span id="moerror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="course"> Select Your Course :- </label>
+                            </td>
+                            <td>
+                                <select name="course" id="course">
+                                    <option value="">SELECT YOUR COURSE</option>
+                                    <option value="BTECH">B.Tech</option>
+                                    <option value="MTECH">M.Tech</option>
+                                    <option value="B.COM">B.Com</option>
+                                    <option value="M.COM">M.Com</option>
+                                    <option value="B.A.">B.A.</option>
+                                    <option value="M.A.">M.A.</option>
+                                </select>
+                                <span id="courseerror"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox-wrapper-19">
+                                    <input type="checkbox" id="cbtest-19" />
+                                    <label for="cbtest-19" class="check-box">
+                                </div>
+                            </td>
+                            <td>
+                                <p>Your are agree to term and condition</p>
+                                <p id="tcerror"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="SUBMIT" id="submit" class="button-89">
+                            </td>
+                            <td>
+                                <input type="reset" value="RESET" id="reset" class="button-89">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <script src="./reg.form.js"></script>
+</body>
+
+</html>
