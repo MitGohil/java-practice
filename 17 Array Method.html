@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fruits = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi"];
+        console.log(fruits);
+
+        fruits.push("Orange");  //add element at last in array
+        console.log(fruits);
+
+        fruits.pop();   //Remove Last element from the array
+        console.log(fruits);
+
+        let popelement = fruits.pop();
+        console.log(popelement);
+        console.log("pop element is ", popelement);
+        console.log(fruits);
+
+        let fruit = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi"];
+        console.log(fruit);
+
+        fruit.unshift("orange");    //Unshift add element at 1st position
+        console.log(fruit);
+
+        fruit.unshift("lemon", "tomatos");
+        console.log(fruit);
+
+        fruit.unshift("potato");
+        fruit.unshift("onion");
+        console.log(fruit);
+
+        let shiftfruit = fruit.shift(); //Shift remove 1st element
+        console.log(fruit);
+        console.log("Shift fruit is ", shiftfruit);
+
+        //push/pop was fast compare to shift/unshift
+        // Because , pop/push add/remove element at last.
+        // But shift/unshift add/remove element at 1st, so before add/remove element in the array 1st change index position all element
+    </script>
+</body>
+
+</html>
