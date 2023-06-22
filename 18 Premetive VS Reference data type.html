@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Premetive data type
+        let num1 = 10;
+        let num2 = num1;
+
+        console.log(num1);
+        console.log(num2);
+
+        num1++
+        //In Premetive data type num2 was not change
+        console.log("After increment by 1 in num1");
+        console.log(num1);
+        console.log(num2);
+
+
+        //Reference data type
+
+        let array1 = ["iem1", "item2"];
+        let array2 = array1
+
+        console.log(array1);
+        console.log(array2);
+
+        array1.push("item3");
+        //In reference data type if we change in array1 than also change in array2
+        console.log("After pushing item3 in array1");
+        console.log(array1);
+        console.log(array2);
+
+
+    </script>
+</body>
+
+</html>
