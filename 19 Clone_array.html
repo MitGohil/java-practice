@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Clone</title>
+</head>
+
+<body>
+
+
+    <script>
+        let array1 = ["item1", "item2"];
+        // let array2 = array1
+        // let array2 = ["item1", "item2"];
+        // let array2 = array1.slice(0);
+        // let array2 = [].concat(array1);
+
+        //Spread operator
+        // let array2 = [...array1];
+
+        // Clone array1 in array2 and add more element in array2
+
+        // let array2 = array1.slice(0).concat(["item3", "item4", "item5"]);
+        // let array2 = [].concat(array1).concat(["item3", "item4", "item5"]);
+        // let array2 = [].concat(array1, ["item3", "item4", "item5"]);
+        // let array2 = [...array1, "item3", "item4", "item5"];
+        // let array2 = [...array1].concat(["item3", "item4", "item5"]);
+
+        let array3 = ["item3", "item4", "item5", "item6"]
+
+        // let array2 = array1.slice(0).concat(array3);
+        // let array2 = [].concat(array1, array3);
+        // let array2 = [].concat(array1).concat(array3);
+        let array2 = [...array1, ...array3];
+
+
+        array1.push("item3");
+
+        console.log(array1 === array2);
+        console.log(array1);
+        console.log(array2);
+    </script>
+</body>
+
+</html>
