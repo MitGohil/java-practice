@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const array1 = ["apple", "banana", "mango", "tomato", "orange", "kiwi", "Pineapple"];
+        const array2 = [];
+
+        console.log(array1);
+        console.log("Length of array1 is ", array1.length);
+        console.log(array2);
+
+        let i = 0;
+        while (i < array1.length) {
+
+            console.log(array1[i]);
+            console.log(array1[i].toUpperCase());
+            array2.push(array1[i].toUpperCase());
+            console.log(array2);
+            i++;
+        }
+        console.log(array2);
+    </script>
+</body>
+
+</html>
