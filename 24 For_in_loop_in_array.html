@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const fruits = ["apple", "banana", "mango", "tomato", "orange", "kiwi", "Pineapple"];
+        const fruits2 = [];
+
+        console.log(fruits);
+        console.log("Length of fruits is ", fruits.length);
+        console.log(fruits2);
+
+        for (let index in fruits ){
+            console.log(index);
+            console.log(fruits[index]);
+            console.log(fruits[index].toUpperCase());
+            fruits2.push(fruits[index].toUpperCase());
+            console.log(fruits2);
+        }
+        console.log(fruits2);
+
+    </script>
+</body>
+
+</html>
