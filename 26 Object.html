@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Object is a Reference data type
+        const person = {
+            name: "Mitesh",
+            age: 30,
+            location: "wadhwan",
+            hobbies: ["Reading", "Sports", "Gaming", "Travelling"]
+        }
+
+        // console.log(typeof person, person);
+        console.log(typeof person);
+        console.log(person);
+
+        // Using dot notaion(.) or bracket notaion [""] we access the data from object
+        // In obect key was by default string
+
+        console.log(person.name);
+        console.log(person["name"]);
+        console.log(person.age);
+        console.log(person["age"]);
+        console.log(person.location);
+        console.log(person.hobbies);
+        console.log(person.hobbies[0]);
+        console.log(person.hobbies[1]);
+        console.log(person.hobbies[2]);
+        console.log(person.hobbies[3]);
+
+        // Add new key and value in object
+        // Using . or [""] to add new key and value in object
+        person.gender = "male"
+        person["mobile"] = 8469975005
+        console.log(person);
+        console.log(person.gender);
+        console.log(person.mobile);
+    </script>
+</body>
+
+</html>
