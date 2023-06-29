@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Difference between dot and bracket notaion
+        const key = "email ";
+        const person = {
+            name: "Mitesh",
+            age: 30,
+            location: "wadhwan",
+            // hobbies: ["Reading", "Sports", "Gaming", "Travelling"]
+
+            // erson hobbies: ["Reading", "Sports", "Gaming", "Travelling"] //not a proper way
+
+            // Use space in key name than use bracket notion
+            ["person hobbies"]: ["Reading", "Sports", "Gaming", "Travelling"]
+        }
+
+        console.log(person);
+        console.log(person["person hobbies"]);
+
+        // Add value of key in person with its own value than not use "" in bracket notaion
+
+        person[key] = "mdgohil111@gmail.com"
+        console.log(person);
+
+    </script>
+</body>
+
+</html>
