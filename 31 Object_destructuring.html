@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const data = {
+            name: "mitesh",
+            age: 30,
+            study: "BEEC",
+            college: "CCET",
+            city: "W.city",
+        }
+
+        console.log(data);
+
+        const value1 = data.name;
+        const value2 = data.age;
+        const value3 = data.study;
+
+        console.log(value1, value2, value3);
+
+        const { name, age, study, ...remain } = data; // varieble name is name, age, study same as object. Using rest operator remaining object element store in remain varieble
+        const { name: var1, age: var2, study: var3, } = data; // we change varieble name i.e var1, var2, var3.
+        console.log(name, age, study);
+        console.log(var1, var2, var3);
+        console.log(remain);
+
+    </script>
+</body>
+
+</html>
