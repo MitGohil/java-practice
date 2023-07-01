@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const users = [
+            { userId: 1, userName: "Mitesh", gender: "Male" },
+            { userId: 2, userName: "Chetan", gender: "Male" },
+            { userId: 3, userName: "Jiyansh", gender: "Male" },
+        ]
+
+        console.log(users);
+
+        for (let user of users) {
+            console.log(user.userId);
+            console.log(user.userName.toUpperCase());
+            console.log(user.gender);
+            console.log(user);
+        }
+    </script>
+</body>
+
+</html>
