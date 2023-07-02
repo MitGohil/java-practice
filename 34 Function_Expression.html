@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Function Expression means assign function in varieble
+
+        const msg = function () {
+            console.log("Happy Birthday");
+        }
+        msg();
+
+        const sumThreeNumber = function (num1, num2, num3) {
+            return num1 + num2 + num3;
+        }
+        const sumans = sumThreeNumber(5, 56, 1);
+        console.log(sumans);
+
+        const isEven = function (num) {
+            return num % 2 === 0
+        }
+        const evenAns = isEven(20);
+        console.log(evenAns);
+
+        const firstChar = function (string) {
+            return string[0]
+        }
+        const firstCharAns = firstChar("Mitesh");
+        console.log(firstCharAns);
+
+        const findTarget = function (array, target) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === target) {
+                    return i;
+                }
+            }
+            return false
+        }
+        const myArray = [1, 5, 6, 8, 9, 26, 2];
+        const target = findTarget(myArray, 2);
+        console.log(target);
+
+    </script>
+</body>
+
+</html>
