@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Arrow Function
+
+
+        const msg = () => {
+            console.log("Happy Birthday");
+        }
+        msg();
+
+        const sumThreeNumber = (num1, num2, num3) => num1 + num2 + num3;
+        const sumans = sumThreeNumber(5, 56, 1);
+        console.log(sumans);
+
+        const isEven = num => num % 2 === 0;       //In function Single parameter pass then () not required, and if only one statement return than return keyword nd {} not required
+        const evenAns = isEven(23);
+        console.log(evenAns);
+
+        const firstChar = string => string[2];
+        const firstCharAns = firstChar("Mitesh");
+        console.log(firstCharAns);
+
+        const findTarget = (array, target) => {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === target) {
+                    return i;
+                }
+            }
+            return false
+        }
+        const myArray = [1, 5, 6, 8, 9, 26, 2];
+        const target = findTarget(myArray, 9);
+        console.log(target);
+
+    </script>
+</body>
+
+</html>
