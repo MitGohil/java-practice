@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Let and Const are block scope. {} this is block scope
+        {
+            const name = "mitesh";
+            console.log(name);
+        }
+        {
+            const name = "gohil";
+            console.log(name);
+        }
+
+
+        const name3 = "Jaymeet";
+        function myApp2() {
+            if (true) {
+                let name3 = "Ram"
+                console.log(name3);
+            }
+            console.log(name3); // This is 1st check in myApp2 function. Not get than search out-of function i.e. in lexical scope.
+        }
+        myApp2();
+
+        // var is function scope.
+        //var also access inside or out side {}.
+
+        {
+            var name1 = "Front-end";
+            console.log(name1);
+
+        }
+        console.log(name1);
+
+
+        function myApp() {
+            if (true) {
+                var name2 = "Ram"
+                console.log(name2);
+            }
+            console.log(name2);
+        }
+
+        myApp();
+    </script>
+</body>
+
+</html>
