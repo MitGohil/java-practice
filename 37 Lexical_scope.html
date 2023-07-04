@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        //myArray is const, i.e. myArray is not re-assignee or not re-declare.
+        //But here, myArray is re-assignee and re-declare. 
+        // comment out any one myArray and see results.
+
+        const myArray = "value1";
+        function myApp() {
+
+            const myArray2 = () => {
+                // const myArray = "value2";
+                console.log("Value of myArray is :", myArray);
+            }
+            console.log(myArray);
+            myArray2();
+        }
+        myApp();
+    </script>
+
+</body>
+
+</html>
