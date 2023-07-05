@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const myFunc = (a, b, ...c) => {    // In c is rest parameter
+            console.log(`a is ${a}`);
+            console.log(`b is ${b}`);
+            console.log("c is ", c);
+        }
+        const num = myFunc(1, 5, 6, 8, 9, 1, 6);
+
+
+        const addAll = (...numbers) => {
+            let total = 0;
+            for (let number of numbers) {
+                total = total + number;
+            }
+            return total;
+        }
+        const ans = addAll(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        console.log(ans);
+
+        
+    </script>
+</body>
+
+</html>
