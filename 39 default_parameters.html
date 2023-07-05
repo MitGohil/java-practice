@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const sum = (a, b) => {
+            if (typeof b === "undefined") {
+                b = 1;
+            }
+            return a + b;
+        }
+
+        const ans1 = sum(5, 6);
+        console.log(ans1);
+        const ans2 = sum(5);
+        console.log(ans2);
+
+
+        const sum2 = (a, b = 0) => a + b; // In this the value of b is default parameter
+        const ans3 = sum2(3, 7);
+        console.log(ans3);
+        const ans4 = sum2(3);
+        console.log(ans4);
+
+    </script>
+
+</body>
+
+</html>
