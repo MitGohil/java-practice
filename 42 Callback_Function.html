@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Callback Function
+
+        function myFun1(name) {
+            console.log("Inside the myFun1");
+            console.log(`Your name is ${name}`);
+        }
+
+
+        function myFun2(callback) {
+            callback("Mitesh");
+            console.log("Inside the myFun2 and welcome back");
+        }
+
+        myFun2(myFun1);
+        // myFun1(myFun2);
+    </script>
+</body>
+
+</html>
