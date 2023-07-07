@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function myFun1() {
+            function myFun2() {
+                console.log("Hello world");
+            }
+            return myFun2; //This return myFun2 function
+        }
+
+        const ans = myFun1();// myFun2 function stored in ans and ans is a function.
+        ans();  //This is print myFun2 function return
+
+
+
+        function myFun3() {
+            function myFun4() {
+                console.log("Hello world2");
+                return "Hello World2"
+            }
+            return myFun4; //This return myFun2 function
+        }
+        const ans2 = myFun3();// myFun2 function stored in ans and ans is a function.
+        ans2();
+        console.log(ans2());
+
+
+        function myFun5() {
+            return function myFun6() {
+                console.log("Hello world3");
+            }
+        }
+        const ans3 = myFun5();// myFun2 function stored in ans and ans is a function.
+        ans3();  //This is print myFun2 function return
+    </script>
+</body>
+
+</html>
