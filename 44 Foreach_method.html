@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const numbers = [5, 8, 6, 7, 9, 1];
+
+        function multiplyBy2(number, index) {
+            console.log(`Index is ${index} and its number is ${number}`);
+            console.log(`${number}*2 = ${number * 2}`);
+        }
+
+        for (let i = 0; i < numbers.length; i++) {
+            multiplyBy2(numbers[i], i)
+        }
+
+        numbers.forEach(multiplyBy2);
+
+        numbers.forEach(function (number, index) {
+            console.log(`Index is ${index} and its number is ${number}`);
+            console.log(`${number}*3 = ${number * 3}`);
+        })
+
+        numbers.forEach(function (number) {
+            console.log(number * 4);
+        });
+
+        const users = [
+            { firstName: "Mitesh", age: 30 },
+            { firstName: "Giyansh", age: 3 },
+            { firstName: "Chetan", age: 32 },
+        ]
+
+        users.forEach(function (user) {
+            console.log(user.firstName);
+        })
+
+        //using Arrow function
+
+        users.forEach(user => {
+            console.log(user.firstName);
+        })
+
+        for (user of users) {
+            console.log(user.firstName);
+        }
+    </script>
+</body>
+
+</html>
