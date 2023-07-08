@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Map method always give new array
+
+        const numbers = [5, 8, 6, 6, 8, 5, 43];
+
+        const square = (number) => number * number;
+
+        const squareNumber1 = numbers.map(square);
+        const squareNumber2 = numbers.map(function (number) {
+            return number * number;
+        });
+
+        console.log(squareNumber1);
+        console.log(squareNumber2);
+
+
+        const users = [
+            { firstName: "Mitesh", age: 30 },
+            { firstName: "Giyansh", age: 3 },
+            { firstName: "Chetan", age: 32 },
+        ]
+
+        const userFirstname = users.map((user) => user.firstName);
+        console.log(userFirstname);
+    </script>
+</body>
+
+</html>
