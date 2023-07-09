@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const sum = numbers.reduce((num, total) => { return total + num });
+
+        console.log(sum);
+
+        const products = [
+            { productId: 1, productName: "Mobile", productPrice: 20000 },
+            { productId: 2, productName: "TV", productPrice: 12000 },
+            { productId: 3, productName: "Fridge", productPrice: 18000 },
+            { productId: 4, productName: "Washing Machine", productPrice: 40000 },
+        ]
+
+        const totalPrice = products.reduce((total, price) => { return total + price.productPrice }, 0);
+        console.log(totalPrice);
+    </script>
+</body>
+
+</html>
