@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Lets check even / odd number using filter method
+
+        const numbers = [5, 6, 8, 2, 226, 617, 16, 986, 361, 3, 7, 0];
+
+        // const isEven = (number) => number%2 === 0;
+        // const evenNumber = numbers.filter(isEven);
+
+        const evenNumber = numbers.filter((number) => number % 2 === 0)
+        console.log(evenNumber);
+
+        // const isOdd = (number) => number % 2 !== 0;
+        // const oddNumber = numbers.filter(isOdd);
+
+        const oddNumber = numbers.filter(number => number%2 !==0 )
+        console.log(oddNumber);
+    </script>
+</body>
+
+</html>
