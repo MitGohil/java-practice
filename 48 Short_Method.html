@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const numbers = [1, 5156, 16, 122, 8, 949, 79];
+        numbers.sort();
+        console.log(numbers);
+
+        const users = ["Mitesh", "mitesh", "Chetan", "chetan", "Giyansh", "giyansh", "MITESH", "CHETAN", "GIYANSH"]
+        users.sort();
+        console.log(users);
+
+
+        //Assending order
+        numbers.sort((a, b) => a - b);
+        console.log(numbers);
+
+        //Dissending order
+        numbers.sort((a, b) => b - a);
+        console.log(numbers);
+
+        const products = [
+            { productId: 1, productName: "Mobile", productPrice: 20000 },
+            { productId: 2, productName: "TV", productPrice: 12000 },
+            { productId: 3, productName: "Fridge", productPrice: 18000 },
+            { productId: 4, productName: "Washing Machine", productPrice: 40000 },
+        ]
+
+        const lowToHigh = products.slice(0).sort((a, b) => a.productPrice - b.productPrice);
+        const highToLow = products.slice(0).sort((a, b) => b.productPrice - a.productPrice);
+        console.log(products);
+        console.log(lowToHigh);
+        console.log(highToLow);
+    </script>
+</body>
+
+</html>
