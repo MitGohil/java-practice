@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const myArray = ["hello", "cat", "dog", "Heart"];
+        function length3(string) {
+            return string.length === 3;
+        }
+        const ans = myArray.find(length3);
+        console.log(ans);   //Always print only first string from the array
+
+        const ans2 = myArray.find((string) => string.length === 3);
+        console.log(ans2);
+
+        const users = [
+            { userId: 1, userName: "Mitesh" },
+            { userId: 2, userName: "Chetan" },
+            { userId: 3, userName: "Giyansh" },
+            { userId: 4, userName: "Jaymeet" },
+        ]
+
+        const myUser = users.find((user) => user.userId === 1);
+        console.log(myUser);
+    </script>
+</body>
+
+</html>
