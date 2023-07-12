@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //splice method delete and insert new item in the array
+        // Splice method containe 3 values
+        // start index number, how many index, inserted item
+
+        const myArray = ["item1", "item2", "item3", "item4", "item5"];
+        newArray = myArray.splice(1, 3);
+        console.log(newArray);
+
+        const myArray1 = ["item1", "item2", "item3", "item4", "item5"];
+        deletedArray = myArray1.splice(1, 3, "newitem2", "newitem3", "newitem4");
+        console.log(myArray1);
+        console.log(deletedArray);
+    </script>
+</body>
+
+</html>
