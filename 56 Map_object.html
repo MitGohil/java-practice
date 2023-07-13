@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Diff between maps and object
+
+        //Object
+        //Object is literal
+        //In object key always in string or symbol
+        
+        const person = {
+            firstName: "Mitesh",
+            age: 30,
+            1: "one",
+        };
+
+        console.log(person.firstName);
+        console.log(person["firstName"]);
+        for (let key in person) {
+            console.log(typeof key);
+        }
+
+        //Maps
+        //Store key value pairs
+        // Use anything as a key in maps. i.e. string, number, symbol,array, object... etc....
+        //stored data in ordered fashion
+        //Duplicates key not allowed
+
+        const person1 = new Map();
+        person1.set("firstName", "Chetan");
+        person1.set("age", 32);
+        person1.set(1, "one");
+        person1.set([1, 2, 3], "onetwothree");  //add array as a key
+
+        console.log(person1);
+
+        console.log(person1.firstName); // Not use this
+        console.log(person1["firstName"]);  // Not use this
+
+        console.log(person1.get("firstName"));
+        console.log(person1.get("age"));
+        console.log(person1.get(1));    //direct access number key
+
+        console.log(person1.keys());
+
+
+        for (let key1 of person1.keys()) {
+            console.log(key1, typeof key1);
+        }
+        for (let key2 of person1) {
+            console.log(key2, Array.isArray(key2));
+        }
+
+        for (let [key, value] of person1) {
+            console.log(key, value);
+        }
+
+
+        //set object as a key and object as value
+
+        const user1 = {
+            id: 1,
+            fname: "Gohil",
+        }
+
+        const userInfo = new Map();
+        userInfo.set(user1, { age: 8, gender: "male" });
+
+        console.log(userInfo);
+    </script>
+</body>
+
+</html>
