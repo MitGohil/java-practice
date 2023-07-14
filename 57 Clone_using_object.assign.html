@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const obj1 = {
+            key1: "value1",
+            key2: "value2",
+        }
+
+        const obj2 = obj1;  //Object assign
+        const obj3 = { ...obj1 }; //Object clone
+        const obj4 = Object.assign({}, obj1);   //Object clone
+
+        obj1.key3 = "value3";
+
+
+        console.log(obj1);
+        console.log(obj2);  //after assine obj1 to obj2, we add new key and value, obj2 also get it
+        console.log(obj3);  //after cloning obj1 to obj3, we add new key and value, obj3 not get it
+        console.log(obj4);
+
+    </script>
+</body>
+
+</html>
