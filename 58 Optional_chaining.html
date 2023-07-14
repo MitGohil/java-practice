@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const user = {
+            firstName: "Mitesh",
+            // address : "",
+        };
+
+        console.log(user);
+        console.log(user.firstName);
+        console.log(user.address);
+
+        console.log(user?.firstName);   //  ?. called optionl chaining. if firstName not found than give undefined. not give error
+        console.log(user?.address?.houseNumber);    //give undefine, because address not found
+        console.log(user.address.houseNumber);   // this was give error
+
+    </script>
+</body>
+
+</html>
