@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //Call method
+        const user1 = {
+            firstName: "Mitesh",
+            age: 30,
+            // about: function () {
+            //     console.log(this.firstName, this.age);
+            // }
+            about() {
+                console.log(this.firstName, this.age);  //Both about are same
+            }
+        }
+
+        user1.about();
+
+        const user2 = {
+            firstName: "Chetan",
+            age: 32,
+        }
+
+        user1.about.call(user2);    //Call method. about function not declare in user2 but we call it from user1
+
+        function about(sport, destination) {
+            console.log(this.firstName, this.age, sport, destination);
+        }
+
+        about.call(user1, "", "ABD");
+        about.call(user2, "cricket", "SNR");
+
+        // apply
+        about.apply(user1, ["football", "surat"]);   //In apply method, extra arguments pass in one array
+
+        //Bind
+        const func = about.bind(user2, "chess", "rajkot");  //bind method give function. infuture we call it any time
+        func();
+
+
+        //Arrow function
+
+        const user3 = {
+            firstName: "Gohil",
+            age: 25,
+            about: () => {
+                console.log(this.firstName, this.age);
+            }
+        }
+
+        user3.about.call(user3);    // Arrow function get "this" from surrounding. i.e. one level-up windows. 
+
+    </script>
+</body>
+
+</html>
