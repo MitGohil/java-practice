@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Function create object
+        //add key nd value pairs
+        //return to object
+
+        //Simple create function object
+
+        function CreateUser(firstName, lastname, email, age, address) {
+            const user = {};
+            user.firstName = firstName;
+            user.lastname = lastname;
+            user.email = email;
+            user.age = age;
+            user.address = address;
+            user.about = function () {
+                return `${this.firstName} is ${this.age} years old.`;
+            }
+            user.is18 = function () {
+                return this.age >= 18;
+            }
+            return user;
+        }
+
+        const user1 = CreateUser("Mitesh", "Gohil", "mdgohil111@gmail.com", 30, "wadhwan city");
+        console.log(user1);
+        console.log(user1.is18());
+        console.log(user1.about());
+    </script>
+</body>
+
+</html>
