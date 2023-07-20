@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Function create object
+        //add key nd value pairs
+        //return to object
+
+        //Add new method
+        //Use proto or object.create
+
+        const userMethod = {
+            about: function () {
+                return `${this.firstName} is ${this.age} years old.`;
+            },
+            is18: function () {
+                return this.age >= 18;
+            },
+            sing: function () {
+                return 'abcdefnvdspi';
+            }
+        }
+        function CreateUser(firstName, lastname, email, age, address) {
+            const user = Object.create(userMethod); // Set proto property to user
+            user.firstName = firstName;
+            user.lastname = lastname;
+            user.email = email;
+            user.age = age;
+            user.address = address;
+
+            return user
+        }
+
+
+        const user1 = CreateUser("Mitesh", "Gohil", "mdgohil111@gmail.com", 30, "wadhwan city");
+        const user2 = CreateUser("Chetan", "Gohil", "cdgohil111@gmail.com", 33, "W.city");
+        const user3 = CreateUser("Giyansh", "Gohil", "gcgohil111@gmail.com", 3, "wadhwan");
+        console.log(user1);
+        console.log(user1.is18());
+        console.log(user1.sing());
+        // console.log(user2);
+        // console.log(user2.is18());
+        // console.log(user2.about());
+        // console.log(user3);
+        // console.log(user3.is18());
+        // console.log(user3.about());
+    //</script>
+</body>
+
+</html>
