@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        //Proto
+        //__proto__ == [[prototype]]  both are same.
+        //[[prototype]] and prototype both are diff.
+
+        const obj1 = {
+            key1: "Value1",
+            key2: "Value2",
+        }
+
+        const obj2 = Object.create(obj1); //This is create new blank object nd also get obj1 value. proto of obj1 is set in obj2. Object.create was set a proto
+
+        obj2.key3 = "Value3";
+
+        console.log(obj2);//__proto__ or [[prototype]] was shaw in browser
+        console.log(obj2.__proto__);// This will show obj1 elements
+        console.log(obj2.key1);
+        console.log(obj2.key2);
+    </script>
+</body>
+
+</html>
