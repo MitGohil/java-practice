@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Only function provide prototype property
+        //Function provide free space as a prototype
+
+        //  function hello(){
+        //     console.log("Hello world");
+        //  }
+        // hello();
+        // const hello = { key1: "Value1" };
+        // const hello = [1,2,3,4];
+        const hello = "Hello";
+
+
+        if (hello.prototype) {
+            console.log("Prototype is present");
+        }
+        else {
+            console.log("Prototype is not present");
+        }
+
+        function user (){
+            console.log("Welcome user");
+        }
+
+        user.prototype.abc = "abc";
+        user.prototype.xyz = "xyz";
+
+        console.log(user.prototype);
+    </script>
+</body>
+
+</html>
