@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class CreateUser {
+            constructor(firstName, lastname, email, age, address) {
+
+                this.firstName = firstName;
+                this.lastname = lastname;
+                this.email = email;
+                this.age = age;
+                this.address = address;
+            }
+            about() {
+                return `${this.firstName} is ${this.age} years old.`;
+            }
+            is18() {
+                return this.age >= 18;
+            }
+            sing() {
+                return 'abcdefnvdspi';
+            }
+        }
+        const user1 = new CreateUser("Mitesh", "Gohil", "mdgohil111@gmail.com", 30, "wadhwan city");
+        const user2 = new CreateUser("Chetan", "Gohil", "cdgohil111@gmail.com", 33, "W.city");
+        // const user3 = new CreateUser("Giyansh", "Gohil", "gcgohil111@gmail.com", 3, "wadhwan");
+
+        console.log(user1);
+        console.log(user1.firstName);
+        console.log(user2.firstName, user2.lastname);
+        console.log(user1.about());
+        console.log(user1.is18());
+        console.log(user1.sing());
+
+        console.log(Object.getPrototypeOf(user1));
+
+
+        //Check key of user1
+        // Print all key of user1 accept prototype key
+        // for (let key in user1) {
+        //     console.log(key);
+        // }
+
+        // Print user1 own property
+        // for (let key1 in user1) {
+        //     if (user1.hasOwnProperty(key1)) {
+        //         console.log(key1);
+        //     }
+        // }
+
+    //</script>
+</body>
+
+</html>
