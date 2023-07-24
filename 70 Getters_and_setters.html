@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //getter method
+
+        class Person {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            // fullName() {
+            //     return `${this.firstName} ${this.lastName}`;
+            // }
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+            set fullName(fullName) {
+                const [firstName, lastName] = fullName.split(" ");
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+        }
+
+        const Person1 = new Person("Mitesh", "Gohil", 30);
+        console.log(Person1);
+        // console.log(Person1.fullName());
+        console.log(Person1.fullName);// In getter not () required. using get we will use function as a property.
+
+        Person1.fullName = "Chetan Gohil";
+        console.log(Person1);
+
+
+    </script>
+</body>
+
+</html>
