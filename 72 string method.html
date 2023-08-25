@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const firstName = "   Mitesh   "
+        console.log(firstName);
+        console.log(firstName.length);
+
+        // Remove extra spaces from string. use trim() method
+        // Give a new string, but Never change original string.
+        let firstName1 = firstName.trim()
+        console.log(firstName1.length);
+        console.log(firstName1);
+
+        // covert in uppercase
+        let upperString = firstName1.toLocaleUpperCase()
+        console.log(upperString);
+
+        // Convert lowercase
+        let lowerString = firstName1.toLocaleLowerCase()
+        console.log(lowerString);
+
+        // take some character from string using slice() method
+        // slice() method take two index nuber.
+        // start index and end index, but never print end index. print upto end-1 index
+
+        let sliceString = firstName1.slice(0, 3)
+        console.log(sliceString);
+
+        // If we pass only one index, then print start from given index to end of string
+        // In this example, result string start from 2 index of original string and print remaining whole string including spaces
+        let str1 = "kdi  ubr eeue f hhf hb e7fg bfu 08 23"
+        let str2 = str1.slice(2)
+        console.log(str2);
+
+
+        // Convert number to string
+        let num = 124;
+        // let str3 = num + ""
+        // let str3 = num.toString()
+        let str3 = String(num)
+        console.log(typeof str3, typeof num);
+
+        // Convert string to number
+        let str4 = "abcisakas";
+        // let num2 = +str4
+        let num1 = Number(str4)
+        console.log(typeof num1);
+
+        let name = "Mitesh";
+        let age = 30;
+
+        console.log(`My name is ${name} and my age is ${age} years`);
+
+        //typeof number was store number in one limit in maximum as well as in minimum
+        //Check limit of typeof number is using MAX_SAFE_NUMBER
+        // if we store outof this limit of number in varieble, then use BigInt datatype
+        let num2 = 2666146614464141313461463464311;
+        console.log(num2);
+
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+
+        // Uses of bigint is two way. use BigInt() or put n after number. i.e. 12n
+        let num3 = BigInt(314419089641616464094564984646)
+        let num4 = 3144190896416164640945649845355353338646n
+        console.log(num3);
+        console.log(num4);
+        console.log(num3 + num4);
+// We do add, sub etc with BigInt, but one is BigInt and another is number, then give error.
+
+
+
+    </script>
+</body>
+
+</html>
