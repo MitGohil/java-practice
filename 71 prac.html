@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function printfullName(fname, lname) {
+            function printname() {
+                console.log(fname, lname);
+            }
+            return printname;
+        }
+
+        const ans = printfullName("Mitesh", "Gohil")
+        // console.log(ans);
+        ans()
+
+        function hello(x) {
+            const a = "var a";
+            const b = "var b";
+            return function () {
+                console.log(x, a, b);
+            }
+        }
+        const ans1 = hello("arg");
+        ans1()
+
+        // function myFunc(power){
+        //     return  function(number){
+        //         return number ** power
+        //     }
+        // }
+
+        // This arrow function
+        const myFunc = power => number => number ** power
+
+        const square = myFunc(2);
+        const ans2 = square(3);
+        console.log(ans2);
+
+        const cube = myFunc(3);
+        const ans3 = cube(3);
+        console.log(ans3);
+    </script>
+</body>
+
+</html>
