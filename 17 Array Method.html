@@ -40,9 +40,36 @@
         console.log(fruit);
         console.log("Shift fruit is ", shiftfruit);
 
+
+        console.log(null && undefined);
+        console.log(undefined && null);
+        console.log(null || undefined);
+        console.log(undefined || null); 0
+        console.log(3 + "3");
+        console.log(5 - "3");
+        const abc = { name: "ajay", age: 0 };
+        if (abc.age) {
+            console.log("abc");
+        }
+        else {
+            console.log("xyz");
+        }
+        console.log(1 == 2 || 2 == 2);
+        console.log(1 == 2 && 2 == 2);
+
         //push/pop was fast compare to shift/unshift
         // Because , pop/push add/remove element at last.
         // But shift/unshift add/remove element at 1st, so before add/remove element in the array 1st change index position all element
+
+
+        // remove duplicate from array
+
+        let array = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"];
+        function removeDuplicates(array) {
+            return [...new Set(array)];
+        }
+
+        console.log(removeDuplicates(array));
     </script>
 </body>
 
