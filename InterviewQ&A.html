@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview</title>
+    <style>
+        th {
+            font-size: 30px;
+        }
+
+        body {
+            width: 90%;
+            /* align-items: center; */
+            margin: 0 auto;
+        }
+
+        table {
+            text-align: center;
+
+        }
+
+        td {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2" width="100%">
+        <tr>
+            <th width="25%">Quetions</th>
+            <th width="75%">Answer</th>
+        </tr>
+        <tr>
+            <td>What is props drilling</td>
+            <td>Prop drilling occurs when a parent component passes data down to its children and then those children
+                pass the same data down to their own children. </td>
+        </tr>
+        <tr>
+            <td>Diff. between map and filter</td>
+            <td>The map method transforms each element of an array and creates a new array with the transformed values,
+                while the filter method creates a new array by selecting only the elements that satisfy a specified
+                condition.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+    <script>
+        console.log(null && undefined);
+        console.log(undefined && null);
+        console.log(null || undefined);
+        console.log(undefined || null);
+        console.log(3 + "3");
+        console.log(5 - "3");
+        console.log(1 == 2 || 2 == 2);
+        console.log(1 == 2 && 2 == 2);
+
+        const abc = { name: "ajay", age: 0 };
+        if (abc.age) {
+            console.log("abc");
+        }
+        else {
+            console.log("xyz");
+        }
+
+
+        // How to remove duplicate data  from array
+        let array = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"];
+        function removeDuplicates(array) {
+            return [...new Set(array)];
+        }
+        console.log(removeDuplicates(array));
+
+        // let age = 10;
+        // var age = 15;
+        // console.log(age);
+
+
+        // Hooks related
+        // how to work useeffect in unmounting
+        // API related
+        // Diff between props and state
+
+        //Quetion - 1
+        (function () {
+            let a = b = 3
+
+            // it should be run as below
+            // b=3
+            // let a=b
+
+            // a = b = 3
+        })();
+        console.log(typeof a); //undefined
+        console.log(typeof b); //number
+        //  console.log(a);  // give error, because of global scope and functional scope of a and b
+        console.log(b);
+
+        //  b was in global scope, so its get value 3, b was number
+        // but a was declare as a varieble, than a was in functional scope, so a is undefine
+        // Without take a varieble, both r give number
+
+
+        //Quetion - 2
+        function foo() {
+            // return{
+            //     name:"Mitesh"
+            // } 
+            return
+            {
+                name: "Mitesh"
+            }
+            // its give undefined, because in JS return statement always start in same line. If we start return statement in next line thats its remeber no any return
+        }
+
+        console.log(foo());
+
+        //Quetion - 3
+        console.log(1 + 1);
+        console.log(1 + "2" + "2");         // 122   Because + will concate
+        console.log(1 + +"2" + "2");        // 32   Because +"" will covert string into integer
+        console.log(1 + +"2" + +"2");       // 5
+        console.log(1 + -"2" + "2");        // -12   Also -"" will covert string into integer
+        console.log(1 + -"2" + +"2");       // 1
+        console.log("A" - "B" + "2");       // NaN2  Because, first two string was not a number, its a character. So we can not operate arithmatic operation between character
+        console.log("A" - "B" + 2);         // NaN
+        console.log("1" - "11");            // -10
+
+        // var e = 0;
+        // function d() {
+        //     e = 10;
+        //     return;
+        //     var e = function () { }
+        // }
+        // d();
+        // console.log(e); // 0    because a declare in global scope and it was not interfear in local/functional scope.
+
+        var e = 0;
+        function d() {
+            e = 10;
+            return;
+            // e = function(){}
+        }
+        d();
+        console.log(e); // 10    because if not declared in function, than take inner value.
+
+        //Quetion - 4
+        console.log({} === {});   //False Because,This condition will always return 'false' since JavaScript compares objects by reference(memory allocation), not value.
+        console.log({} == {});    //false
+        console.log({} = {});
+
+        let f = {};
+        let g = f;
+        console.log(f === g);     //true  If we get true, than assign object one to other.
+
+        //Quetion - 5
+        function test() {
+            function test2() {
+                return 111;
+            }
+            return test2();
+            function test2() {
+                return 143;
+            }
+
+            //This is also hoisted as below step
+
+            // function test2() {
+            //     return 111;
+            // }
+            // function test2() {
+            //     return 143;
+            // }
+            // return test2();
+        }
+        console.log(test());    //143   because function declaration doesnt metter it declare before or after return. return always last hoisted function return.
+
+        //Quetion - 6
+        test1();    // Here javascript hoisting concept will work. Javascript always do function declaration at top of the level.
+        // Below is function declaration
+        function test1() {
+            console.log("Test1 function called");
+        }
+
+        //test2();    //Give error, because here function expression and here undrestand varieble was declare not function.
+        // console.log(test2);
+        // console.log(test2());
+        var test2 = function () {
+            console.log("Test1 function called");
+        }
+
+
+        //Quetion - 7
+        console.log(true + true);   // 2    Because value of true is 1 and value of 1 is 0
+        console.log(true + false);  // 1
+        console.log(true - true + true);    //1
+        console.log(-true - true + true);   //-1
+
+        //Quetion - 8
+        // function Hello() {
+        //     let a = 10;
+        //     function innerfunc() {
+        //         return a;
+        //     }
+        //     return innerfunc()
+        // }
+        // console.log(Hello());   //Here inner function access value of  outer function's varieble. Its called lexial scope.
+
+
+        //Closer function
+        function Hello() {
+            let a = 10;
+            function innerfunc() {
+                return a;
+            }
+            return innerfunc;
+        }
+        let inner = Hello();
+        console.log(inner);     //Inner function
+        console.log(inner());   //10
+
+
+
+
+    </script>
+</body>
+
+</html>
