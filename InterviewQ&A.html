@@ -61,7 +61,7 @@
         console.log(5 - "3");
         console.log(1 == 2 || 2 == 2);
         console.log(1 == 2 && 2 == 2);
-
+        
         const abc = { name: "ajay", age: 0 };
         if (abc.age) {
             console.log("abc");
@@ -69,25 +69,27 @@
         else {
             console.log("xyz");
         }
-
-
         // How to remove duplicate data  from array
-        let array = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"];
-        function removeDuplicates(array) {
-            return [...new Set(array)];
-        }
-        console.log(removeDuplicates(array));
-
-        // let age = 10;
+        // let array =(["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"]);
+        // function removeDuplicates(array) {
+            //     return [...new Set(array)];
+            // }
+            // console.log(removeDuplicates(array));
+            let array = new Set(["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"])
+            console.log(array);
+            
+            // let age = 10;
         // var age = 15;
         // console.log(age);
-
-
+        
+        
         // Hooks related
         // how to work useeffect in unmounting
         // API related
         // Diff between props and state
+        </script>
 
+        <script>
         //Quetion - 1
         (function () {
             let a = b = 3
@@ -106,8 +108,9 @@
         //  b was in global scope, so its get value 3, b was number
         // but a was declare as a varieble, than a was in functional scope, so a is undefine
         // Without take a varieble, both r give number
+       </script>
 
-
+       <script>
         //Quetion - 2
         function foo() {
             // return{
@@ -121,9 +124,11 @@
         }
 
         console.log(foo());
-
-        //Quetion - 3
-        console.log(1 + 1);
+       </script>
+       
+       <script>
+//Quetion - 3
+console.log(1 + 1);
         console.log(1 + "2" + "2");         // 122   Because + will concate
         console.log(1 + +"2" + "2");        // 32   Because +"" will covert string into integer
         console.log(1 + +"2" + +"2");       // 5
@@ -150,9 +155,10 @@
         }
         d();
         console.log(e); // 10    because if not declared in function, than take inner value.
-
-        //Quetion - 4
-        console.log({} === {});   //False Because,This condition will always return 'false' since JavaScript compares objects by reference(memory allocation), not value.
+       </script>
+       <script>
+ //Quetion - 4
+//  console.log({} === {});   //False Because,This condition will always return 'false' since JavaScript compares objects by reference(memory allocation), not value.
         console.log({} == {});    //false
         console.log({} = {});
 
@@ -160,8 +166,10 @@
         let g = f;
         console.log(f === g);     //true  If we get true, than assign object one to other.
 
-        //Quetion - 5
-        function test() {
+       </script>
+       <script>
+//Quetion - 5
+function test() {
             function test2() {
                 return 111;
             }
@@ -182,8 +190,10 @@
         }
         console.log(test());    //143   because function declaration doesnt metter it declare before or after return. return always last hoisted function return.
 
-        //Quetion - 6
-        test1();    // Here javascript hoisting concept will work. Javascript always do function declaration at top of the level.
+       </script>
+       <script>
+ //Quetion - 6
+ test1();    // Here javascript hoisting concept will work. Javascript always do function declaration at top of the level.
         // Below is function declaration
         function test1() {
             console.log("Test1 function called");
@@ -195,15 +205,19 @@
         var test2 = function () {
             console.log("Test1 function called");
         }
-
-
-        //Quetion - 7
-        console.log(true + true);   // 2    Because value of true is 1 and value of 1 is 0
+       </script>
+       <script>
+ //Quetion - 7
+ console.log(true + true);   // 2    Because value of true is 1 and value of 1 is 0
         console.log(true + false);  // 1
         console.log(true - true + true);    //1
         console.log(-true - true + true);   //-1
 
-        //Quetion - 8
+       </script>
+        
+
+        <script>
+ //Quetion - 8
         // function Hello() {
         //     let a = 10;
         //     function innerfunc() {
@@ -226,11 +240,19 @@
         console.log(inner);     //Inner function
         console.dir(inner);
         console.log(inner());   //10
+        </script>
+
+       
+        
+       
+
+
+       
+       
 
 
 
 
-    </script>
 </body>
 
 </html>
