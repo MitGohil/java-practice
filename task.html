@@ -18,6 +18,7 @@
     <input type="number" name="number" id="num5">
     <p id="res"></p>
     <button onclick="fun()">Check</button>
+
     <script>
         // var num;
         function fun() {
@@ -39,16 +40,17 @@
             }
         }
 
-
+        // Task 1
         let array = [1, 5, 2, 5, 6, 8, 9, 10]
         let sum = 0
- 
+
         for (let i = 0; i < array.length; i++) {
             sum = sum + array[i]
         }
         console.log("Sum of array elements are " + sum);
 
 
+        // Task 2
         let heighest = 0;
         let secheighest = 0;
         for (let i = 0; i < array.length; i++) {
@@ -62,6 +64,57 @@
         }
         console.log("Heighest number is " + heighest);
         console.log("Second heighest number is " + secheighest);
+
+
+        // Task 3
+        const number = 4
+
+        let fact = 1;
+        for (i = 1; i <= number; i++) {
+            fact = fact * i;
+        }
+        console.log(`The factorial of ${number} is ${fact}.`);
+
+        // Task 4
+
+        const str = "This is the example"
+        function countRepeating(str) {
+            // empty string
+            if (str.length === 0) {
+                console.log("String is empty");
+                return;
+            }
+
+            // creating a new map
+            let mp = new Map();
+            for (let i = 0; i < str.length; i++) {
+                mp.set(str[i], 0);
+            }
+
+            // iterate on the whole string and update the count of each character
+            for (let i = 0; i < str.length; i++) {
+                let curr_count = mp.get(str[i]);
+                mp.set(str[i], curr_count + 1);
+            }
+
+            // printing the count of each character
+            for (let [key, value] of mp) {
+                console.log(`${key} occurs ${value} times.`);
+            }
+        }
+
+        countRepeating(str);
+
+        // Task 5
+        const str1 = "This is";
+        const str2 = "This is";
+
+        let a = str1.split();
+        let b = str2.split();
+
+        
+        console.log(str1 === str2);
+
 
 
     </script>
