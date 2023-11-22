@@ -13,23 +13,21 @@
     <script>
 
         const numbers = [5, 8, 6, 7, 9, 1];
-
         function multiplyBy2(number, index) {
             console.log(`Index is ${index} and its number is ${number}`);
             console.log(`${number}*2 = ${number * 2}`);
         }
-
-        for (let i = 0; i < numbers.length; i++) {
-            multiplyBy2(numbers[i], i)
-        }
-
+        // for (let i = 0; i < numbers.length; i++) {
+        //     multiplyBy2(numbers[i], i)
+        // }
         numbers.forEach(multiplyBy2);
+
+
 
         numbers.forEach(function (number, index) {
             console.log(`Index is ${index} and its number is ${number}`);
             console.log(`${number}*3 = ${number * 3}`);
         })
-
         numbers.forEach(function (number) {
             console.log(number * 4);
         });

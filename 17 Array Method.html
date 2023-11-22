@@ -79,11 +79,13 @@
         // remove duplicate from array
 
         let array = ["Apple", "Bananas", "Graps", "Pineapple", "Kiwi", "Bananas", "Pineapple"];
-        function removeDuplicates(array) {
-            return [...new Set(array)];
-        }
+        // function removeDuplicates(array) {
+        //     return [...new Set(array)];
+        // }
 
-        console.log(removeDuplicates(array));
+        // console.log(removeDuplicates(array));
+        array = new Set(array)
+        console.log(array);
     </script>
 </body>
 

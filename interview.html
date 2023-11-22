@@ -21,40 +21,157 @@
 
     <script>
         // 2
-        let a = [];
-        let b = a;
-        console.log(a == b);            //true
-        console.log(a === b);           //true
+        // let a = [];
+        // let b = a;
+        // console.log(a == b);            //true
+        // console.log(a === b);           //true
 
         // Here we assign a to b,  so memory location was both are same
     </script>
 
     <script>
+        // 3
+        // let a=[20];
+        // let b=[20];
+        // console.log(a[0] == b[0]);          //true
+        // console.log(a[0] === b[0]);         //true
+        // // Because, here we compare value of elements of array.[0] meanse value of 0th index
+        // //=== check type of data, if b=["20"], then ans was false
 
+        // console.log(a === b);               //false
     </script>
 
     <script>
-
+        // 4
+        // let a=[1,2,3,4,5];
+        // let z= {name:"Mitesh"};
+        // console.log(a);                         //[1,2,3,4,5]
+        // console.log(...a);                      //1 2 3 4 5
+        // ... was destructure the array and remove all elements from array. Z was for only for destraction
     </script>
 
     <script>
-
+        // 5
+        // console.log(typeof NaN);                    //number
+        // Because NaN is special type of number of JS
     </script>
 
     <script>
-
+        // 6
+        // let a = 10 - - 10;
+        // console.log(a);                             //20
+        // - - = + as per maths rule
     </script>
 
     <script>
-
+        // 7
+        // const set = new Set([1,2,2,3,4,5,5]);
+        // console.log(set);                            //Set(5) {size: 5, 1, 2, 3, 4, 5}
+        // Set was remove duplicate data from array
     </script>
 
     <script>
-
+        // 8
+        // let data = {name:"Mitesh"};
+        // console.log(delete data.name);                  //true
+        // console.log(data);                              //{} blank object
+        // delete data.name was delete name from object
     </script>
 
     <script>
+        // 9
+        // let data = {name:"Mitesh"};
+        // console.log(delete data);                       //false
+        // console.log(data);                              //{name:"Mitesh"}
+        // using delete we delete only properties of varieble, not whole varieble
 
+        // let a = [1,2,5,6,32];
+        // console.log(delete a[2]);                       //true
+        // console.log(a);                                 //[1, 2, …, 6, 32]
+    </script>
+
+    <script>
+        // 10
+        // const data = ["mitesh", "Chetan", "Jiyansh"];
+        // const [y] = data;
+        // console.log(y);                                 //mitesh
+        // Jitne bbhi element array mai lenge,utne hi element print hoga, as per react hook useState.
+
+        // const [a, b] = data;
+        // console.log(a, b);                               //mitesh Chetan
+    </script>
+
+    <script>
+        // 11
+        // How to get only second value from the array
+
+        // const data = ["mitesh", "Chetan", "Jiyansh"];
+        // const [, y] = data;
+        // console.log(y);                                     //Chetan
+        // Just put , before y
+    </script>
+
+    <script>
+        //12        
+        const data = { name: "Mitesh", age: 30, skill: "ReactJS" };
+        console.log(data.name);
+
+        // How to get object property without using dot
+        const { name } = data;
+        const { age } = data;
+        console.log(name);
+        console.log(age);
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+    </script>
+
+    <script>
     </script>
 </body>
 
